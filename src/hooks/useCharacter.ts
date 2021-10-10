@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { CharacterSides } from '../types/CharacterSides';
 import { mapSpots } from '../data/mapSpots';
 
-export const useCharacter = () => {
+export const useCharacter = (propName: string) => {
+  const [name, setName] = useState(propName);
   const [posicao, setPosicao] = useState({x: 3, y: 5});
   const [side, setSide] = useState<CharacterSides>('down');
 
@@ -48,6 +49,7 @@ const canMove = (x: number, y: number) => {
 }
 
   return {
+    name,
     x: posicao.x,
     y: posicao.y,
     side,
