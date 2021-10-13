@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import * as C from "./App.styles"
 import { Character } from "./components/Character";
 import { useCharacter } from "./hooks/useCharacter";
-import { Page } from "./App.styles"; 
 
 const App = () => {
 const char = useCharacter('Vivis');
@@ -33,13 +32,11 @@ const handleKeyDown = (e: KeyboardEvent) => {
 }
 
 return(
- <Page>
     <C.Container>
         <C.Map>
            <Character x = {char.x} y = {char.y} side = {char.side} name={char.name}/>
         </C.Map>
     </C.Container>
- </Page>
   );
 }
 
