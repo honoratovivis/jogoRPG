@@ -28,6 +28,9 @@ const handleKeyDown = (e: KeyboardEvent) => {
     case 'ArrowDown':
       char.moveDown();
     break;
+    case 'KeyN':
+      char.changeName();
+    break;
   }
 }
 

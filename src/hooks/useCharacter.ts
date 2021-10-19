@@ -48,6 +48,12 @@ const canMove = (x: number, y: number) => {
     return false;
 }
 
+const changeName = () => {
+    let name = window.prompt('Nome do char:')
+    console.log(name);
+    setName(name ? name : "")
+}
+
   return {
     name,
     x: posicao.x,
@@ -56,6 +62,7 @@ const canMove = (x: number, y: number) => {
     moveDown,
     moveLeft,
     moveRight,
-    moveTop
+    moveTop,
+    changeName
   };
 }
