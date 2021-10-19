@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import * as C from "./App.styles"
 import { Character } from "./components/Character";
 import { useCharacter } from "./hooks/useCharacter";
@@ -27,6 +27,9 @@ const handleKeyDown = (e: KeyboardEvent) => {
     case 'KeyS':
     case 'ArrowDown':
       char.moveDown();
+    break;
+    case 'KeyN':
+      char.changeName();
     break;
   }
 }
